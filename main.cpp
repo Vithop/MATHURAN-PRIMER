@@ -1,36 +1,27 @@
-#include <iostream>
-#include <vector>
 #include <array>
+#include <numeric>
+#include <algorithm>
+#include <iostream>
 
 using namespace std;
+
 int main() {
-    const auto size = 10;
-    auto increment = 2;
-    auto previncrement = 0;
-    array<int, size> list;
+    array<int, 500000> list;
+    iota(list.begin(), list.end(), 2);
+    cout<<"Started...";
 
-    for (int x = 0 ; x < size; x++){
-        list[x] = x + 2;
-    }
-    while (previncrement != increment) {
-        previncrement = increment;
-        for (int x = 0; x < size;) {
-            if (list[x] != increment) {
-                list[x] = 0;
-            }
-            x = x + increment;
-        }
-        for (int x = 0; x < size; x++) {
-            if (x > increment - 2) {
-                if (list[x] != 0) {
-                    increment = list[x];
-                }
+    for_each(list.begin(), list.end(), [&list](const auto elem){
+        if(elem==0){ return; }
 
-            }
+        transform(list.begin(), list.end(), list.begin(), [elem](const auto number){
+            return (number!=elem && number%elem==0) ? 0 : number;
+        });
+    });
+
+    for(auto elem : list){
+        if(elem!=0){
+            cout<<elem<<", ";
         }
-    }
-    for (int x = 0 ; x < size; x++){
-        cout << list[x];
     }
     return 0;
 }

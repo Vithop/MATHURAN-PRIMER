@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2017.3.1\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\MATHURAN_PRIMER.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\MATHURAN_PRIMER.dir/objects.a @CMakeFiles\MATHURAN_PRIMER.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  -std=c++14 -Wall -Wextra -Wpedantic -g   -Wl,--whole-archive CMakeFiles\MATHURAN_PRIMER.dir/objects.a -Wl,--no-whole-archive  -o MATHURAN_PRIMER.exe -Wl,--out-implib,libMATHURAN_PRIMER.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\MATHURAN_PRIMER.dir\linklibs.rsp

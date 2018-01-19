@@ -1,0 +1,3 @@
+C:/Users/Vithuran/OneDrive/Documents/C++/MATHURAN PRIMER/cmake-build-debug/CMakeFiles/MATHURAN_PRIMER.dir
+C:/Users/Vithuran/OneDrive/Documents/C++/MATHURAN PRIMER/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Vithuran/OneDrive/Documents/C++/MATHURAN PRIMER/cmake-build-debug/CMakeFiles/rebuild_cache.dir

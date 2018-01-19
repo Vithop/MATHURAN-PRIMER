@@ -5,8 +5,17 @@
 
 using namespace std;
 
+template<typename T, size_t Size>
+void printNonZeroElements(const array<T, Size>& array){
+    for(auto elem : array){
+        if(elem!=0){
+            cout<<elem<<", ";
+        }
+    }
+}
+
 int main() {
-    array<int, 500000> list;
+    array<int, 500> list;
     iota(list.begin(), list.end(), 2);
     cout<<"Started...";
 
@@ -18,10 +27,6 @@ int main() {
         });
     });
 
-    for(auto elem : list){
-        if(elem!=0){
-            cout<<elem<<", ";
-        }
-    }
+    printNonZeroElements(list);
     return 0;
 }
